@@ -6,10 +6,10 @@ class App extends React.Component {
     count: 0
   };
   add = () => {
-    console.log("add");
+    this.setState(current => ({ count: current.count + 1 })); //setState : 함수를 호출하는 역할
   };
   minus = () => {
-    console.log("minus");
+    this.setState(current => ({ count: current.count - 1 }));
   };
 
   render() {
