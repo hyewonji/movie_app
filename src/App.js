@@ -17,6 +17,9 @@ class App extends React.Component {
   componentDidUpdate() {
     console.log("I just updated")
   }
+  componentWillUnmount() {
+    console.log("Goodbye, cruel world");
+  }
   render() {
     console.log("I'm rendering");
     return (
