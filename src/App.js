@@ -1,5 +1,6 @@
 import axios from "axios";
 import React from "react";
+import Movie from "./Movies"
 
 class App extends React.Component {
   state = {
@@ -7,7 +8,8 @@ class App extends React.Component {
     movies: []
   }
   getMovies = async () => {
-    const movies = await axios.get("https://yts-proxy.now.sh/list_movies.json")
+    const { data: { data: { movies } } } = await axios.get("https://yts-proxy.now.sh/list_movies.json")
+    this.setState({ movies, isLoading: false })
   }
 
   componentDidMount() {
@@ -15,8 +17,23 @@ class App extends React.Component {
   }
 
   render() {
-    const { isLoading } = this.state;
-    return <div>{this.state.isLoading ? "Loading.." : "We are ready"}</div>
+    const { isLoading, movies } = this.state;
+    return (
+      <div>
+        {isLoading
+          ? "Loading..."
+          : movies.map(movie => (
+            <Movie
+              key={movie.id}
+              id={movie.id}
+              year={movie.year}
+              title={movie.title}
+              summary={movie.summary}
+              poster={movie.medium_cover_image}
+            />
+          ))}
+      </div>
+    );
   }
 }
 
