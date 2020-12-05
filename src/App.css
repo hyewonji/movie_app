@@ -1,3 +1,10 @@
 body{
     background-color: #f2f2f2;
+    box-sizing: border-box;
+    padding-top: 50px;
+}
+
+.movies{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
