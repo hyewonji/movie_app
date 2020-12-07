@@ -21,7 +21,6 @@
 }
 
 .movie p{
-    overflow: scroll;
     height: 40%;
     position: absolute;
     bottom: 0;
