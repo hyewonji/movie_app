@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
-import Movie from "../compoments/Movie"
-import "./App.css"
+import Movie from "../components/Movie"
+import "./Home.css"
 
 class Home extends React.Component {
     state = {
@@ -51,4 +51,4 @@ class Home extends React.Component {
     }
 }
 
-export default App;
+export default Home;
