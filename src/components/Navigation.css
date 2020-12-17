@@ -1,0 +1,22 @@
+.navigation{
+    position:fixed;
+    top: 50px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    height: auto;
+    background-color: hsl(0, 0%, 100%);
+    font-size: 18px;
+    box-shadow: 0 3px 9px 0 rgba(32, 33, 36, 0.28);
+}
+
+
+.navigation a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+}
