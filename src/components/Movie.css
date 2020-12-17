@@ -4,7 +4,8 @@
     margin-bottom: 40px;
     padding: 30px;
     display: flex;
-    height: 250px;
+    width:70%;
+    height: 200px;
     box-shadow: 0 3px 9px 0 rgba(32, 33, 36, 0.28);
 }
 
