@@ -10,6 +10,12 @@ body{
     width: 100%;
 }
 
+#root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .loader{
     height: 100%;
     width:100%;
